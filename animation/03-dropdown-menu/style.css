@@ -14,9 +14,11 @@
 
 .dropdown-menu {
   list-style: none;
+	transform-origin: top;
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
+	animation: appear 1s ease-in-out;
 
   display: none;
 }
@@ -29,4 +31,16 @@ ul.dropdown-menu li:hover {
   display: block;
 }
 
+@keyframes appear {
+	from {
+		transform: scaleY(0%);
+	}
 
+	70% {
+		transform: scaleY(120%);
+	}
+
+	to {
+		transform: scaleY(100%);
+	}
+}
